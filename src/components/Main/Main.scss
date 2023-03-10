@@ -1,0 +1,38 @@
+/* WRAP */
+.Wrap {
+    margin: 1em auto 2.5em;
+    
+}
+
+/*MAP STYLE*/
+
+.Map {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.Mapview {
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .Wrap {
+        height: 38em;
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items:flex-end;
+        column-gap: 1em;
+        margin: 3.5em auto;
+
+    }
+    .Map {
+        width: 50%;
+        height: 100%;
+    }
+}
+

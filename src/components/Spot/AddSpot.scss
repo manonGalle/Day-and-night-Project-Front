@@ -1,0 +1,125 @@
+@use 'src/style/vars';
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 768px) {
+
+}
+
+.AddSpot {
+    position: relative;
+    text-align: left;
+    margin: 0 0.7em 0.7em 0.7em;
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    &-close {
+        text-align: right;
+        margin: 0.3em 1em 0em 0em;
+        cursor: pointer;
+
+        &:hover{
+            font-weight: bold;
+        }
+    }
+
+    &-wrapper {
+        max-width: 100%;
+        padding: 0.2em;
+        border-radius: 5px;
+    }
+
+    &-infos {
+        border: 1px solid black;
+        background-color: white;
+        padding: 1.2em;
+        border-radius: 5px;
+    }
+
+    &-title {
+        width: 95%;
+        resize: none;
+        padding: .3em;
+        margin-top: .3em;
+    }
+
+    &-description {
+        min-height: 10em;
+        width: 95%;
+        padding: .3em;
+        resize: none;
+
+        &::-webkit-scrollbar {
+            width: .5em;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: vars.$color-green-opacity;
+            border: 1px solid rgb(194, 191, 191);
+            border-radius: 5px;
+        }
+    }
+
+    &-button {
+        text-align: center;
+    }
+
+    button {
+        min-width: 8em;
+        height: 2em;
+        cursor: pointer;
+    }
+
+    input {
+        cursor: pointer;
+    }
+    &-file {
+        cursor : pointer;
+    }
+
+    &-validate-fieldset {
+        padding: 0.2em;
+        border-radius: 5px;
+    }
+
+    &-validateMessage {
+        background-color: white;
+        padding: 0.6em;
+        border-radius: 5px;
+        margin: 0.1em;
+        text-align: center;
+
+        h1 {
+            margin-bottom: 0.5em;
+        }
+
+        button {
+            width: 4em;
+        }
+    }
+
+    
+}
+
+/* DARKMODE */
+.AddSpot-wrapper-dark {
+    .AddSpot-infos {
+        background-color: vars.$color-violet;
+    }
+
+    textarea,
+    select,
+    .AddSpot-validateMessage {
+        background-color: vars.$color-violet;
+        border: 1px solid black;
+        border-radius: 2px;
+        color: white;
+        padding: .3em;
+    }
+
+    button {
+        box-shadow: 3px 3px 5px black;
+    }
+    
+}
+

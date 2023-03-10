@@ -1,0 +1,88 @@
+@use 'src/style/vars';
+
+/* CONNECT AND CREATE GENERAL DIV */
+.Connect-general {
+    background-color: vars.$color-green-opacity;
+    padding: 0.2em;
+    border-radius: 5px;
+    margin: 3em 0;
+}
+
+.Connect-and-create-general {
+    position: relative;
+    text-align: left;
+    margin: 1em;
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.Connect, .Create {
+    border: 2px solid black;
+    background-color: white;
+    padding-left: 0.5em;
+    padding: 0.5em;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: medium;
+    padding-bottom: 0.5em;
+}
+
+input {
+    width: 90%;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+button {
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    padding: .5em;
+    box-shadow: 3px 3px 5px grey;
+    background-color: vars.$color-green-opacity;
+    cursor : pointer;
+}
+
+.Connect-button, .Create-button  {
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+/* DARKMODE */
+.Connect-general-dark .Connect-and-create > * {
+    background-color: vars.$color-violet;
+    color: white;
+}
+.Connect-general-dark input {
+    background-color: vars.$color-violet;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: white;
+}
+
+.Connect-general-dark button {
+    box-shadow: 3px 3px 5px black;
+}
+
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 768px) {
+    .Connect-and-create {
+        display: flex;
+        margin: 2em 0;
+    }
+
+    .Connect {
+        margin-right: 3em;
+        flex-direction: column;
+    }
+
+    .Create {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,162 @@
+@use 'src/style/vars';
+
+.Footer {
+    display: flex;
+    flex-direction:row;
+    font-size: smaller;
+    text-align: center;
+    justify-content: space-between;
+    gap: .3em;
+    margin-top: 2em;
+
+
+    & h4 {
+        font-size: medium;
+        margin-bottom: .8em;
+        font-weight: bold;
+    }
+
+    &-About {
+        width: 33%;
+        & nav {
+            display: flex;
+            flex-direction: column;
+            row-gap: .5em;
+        }
+    }
+
+    &-Contact {
+        width: 33%;
+    }
+
+    &-LegalNotices {
+        width: 33%;
+    }
+
+    & a {
+        text-decoration:none;
+        display: block;
+        width: 100%;
+        color: gray;
+    }
+
+    &-Team{
+        & img {
+            width: 100px;
+            height:100px;
+        }
+        & h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+        & h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        &-member{
+            background-color: #50b77886;
+            margin: 15px;
+            padding: 15px;
+            display: flex;
+
+            &-right {
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+                justify-content: center;
+            }
+        }
+        &-dark {
+            & h1, h2, p {
+                color: #ccc;
+            }
+        }
+    }
+
+    &-Project {
+        & img {
+            width: 100px;
+            height:100px;
+        }
+        & h1 {
+            font-size: 50px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        & p {
+            text-align: justify;
+            padding: 10px;
+            background-color: vars.$color-green-opacity;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px grey;
+        }
+        &-dark {
+            & h1, h2 {
+                color: #ccc;
+            }
+            & p {
+                box-shadow: 3px 3px 5px black;
+            }
+        }
+    }
+
+
+    &-Charter {
+        & img {
+            width: 100px;
+            height:100px;
+        }
+        & h1 {
+            font-size: 50px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        & p {
+            text-align: justify;
+            padding: 10px;
+            background-color: vars.$color-green-opacity;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px grey;
+        }
+        &-dark {
+            & h1, h2 {
+                color: #ccc;
+            }
+            & p {
+                box-shadow: 3px 3px 5px black;
+            }
+        }
+    }
+
+    &-LegalMention {
+        & h1 {
+            font-size: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        & p {
+            text-align: justify;
+            padding: 10px;
+            background-color: vars.$color-green-opacity;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px grey;
+        }
+        &-dark {
+            & h1, h2 {
+                color: #ccc;
+            }
+            & p {
+                box-shadow: 3px 3px 5px black;
+            }
+        }
+    }
+
+
+    /*DARKMODE*/
+    &-dark {
+        & h4 {
+            color: #ccc;
+        }
+    }
+
+}

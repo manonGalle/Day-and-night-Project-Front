@@ -1,0 +1,122 @@
+@use 'src/style/vars';
+
+.Header {
+    display: flex;
+    align-items: center;  
+    margin-bottom: 2em;
+    justify-content: space-between;
+
+    &-logo {
+        display: flex;
+        align-items: center;
+        cursor : pointer;
+    }
+
+    &-logo img {
+        width: 5em;
+        height: 5em;
+    }
+
+    &-logo h1 {
+        display: none;
+        margin-left: 0.5em;
+        font-size: 2.2em;
+        font-weight: bold;
+        color: vars.$color-day;
+    }
+
+    &-logo h1 span {
+        color: vars.$color-violet;
+    }
+
+    &-login {
+        display: flex;
+        align-items: center;
+        gap: .7em;
+    }
+
+    &-login-user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: .5em;
+        text-align: center;
+
+        &-logout {
+            text-decoration: underline;
+        }
+    }
+
+    button {
+        background-color: #50b778d5;
+        border: none;
+        border-radius: 5px;
+        padding: .5em;
+        width: fit-content;
+        height: fit-content;
+        box-shadow: 3px 3px 5px grey;
+        cursor : pointer;
+    } 
+
+    .ToggleMode {
+        padding: .4em;
+        height:fit-content;
+    
+        & img {
+            height: 1.1em;
+            width: 1.1em;
+            vertical-align: middle;
+        }
+    }
+
+
+    /*DARKMODE*/
+    &-dark  {
+        & h1 span {
+        color: #ccc;
+        } 
+
+        & button {
+            box-shadow: 3px 3px 5px black;
+        }
+
+        & .Header-login-user-logout {
+            color: #ccc
+        }
+    }
+}
+
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 490px) {
+    .Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        margin-bottom: 2em;
+
+        &-logo h1 {
+            display: inline;
+        }
+
+        &-login {
+            gap: 1.5em;
+        }
+
+        .ToggleMode {
+            padding: .5em;
+
+            & img {
+                height: 1.2em;
+                width: 1.2em;
+
+            }
+        }
+    }
+}

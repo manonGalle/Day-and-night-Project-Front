@@ -1,0 +1,70 @@
+@use 'src/style/vars';
+
+.NotFound {
+    background-color: vars.$color-green-opacity;
+    padding: 2em 1em 2em 1em;
+    border-radius: 5px;
+
+    &-404 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2em;
+
+        &-hiker-fall {
+            position: absolute;
+            width: 2.5em;
+            margin-left: -0.7em;
+            margin-top: 3.5em;
+        }
+
+        &-tent {
+            width: 5.5em;
+        }
+        
+        &-firstchar, &-lastchar {
+            font-weight: bold;
+            color: #fd4e26;
+            font-size: 5.5em;
+        }
+
+        &-firstchar {
+            transform: rotate(-30deg);
+            margin: 0.50em 0.10em -0.4em 0em;
+        }
+
+        &-lastchar {
+            margin-left: 0.1em;
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 1em;
+
+        &-message {
+            margin-top: 4em;
+        }
+
+        &-message, &-redirection {
+            margin-bottom: 1.5em;
+        }
+
+        span {
+            font-weight: bold;
+            color: #fd4e26;
+            font-size: large;
+        }
+    }
+
+    /* DARK MODE */
+    &-dark {
+        & p span, & p {
+            color: vars.$color-violet;
+        }
+
+    }
+
+}

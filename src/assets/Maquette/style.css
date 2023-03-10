@@ -1,0 +1,269 @@
+/* BODY */
+
+body {
+    font-family: 'Nunito', sans-serif;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+/*RESPONSIVE*/
+@media (min-width: 768px) {
+    body {
+        width: 80%;
+    }
+}
+
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    margin-bottom: 2em;
+}
+
+.Header-logo img {
+    width: 5em;
+    height: 5em;
+}
+
+.Header-logo {
+    display: inline-flex;
+    align-items: center;  
+}
+
+.Header-logo h1 {
+    margin-left: 1em;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #ffb700;
+}
+
+.Header-logo h1 span {
+    color: #312237;
+}
+
+.Header-login a {
+    text-align: center;
+}
+
+.Header-login {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: .5em;
+    column-gap: 2em;
+    justify-content: center;
+}
+
+.Header-login input {
+    background-color: #50b778d5;
+    border: none;
+    border-radius: 5px;
+    padding: .5em;
+    box-shadow: 3px 3px 5px grey;
+}
+
+
+
+/* FILTERS */
+.Filters {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+}
+
+.Filters img {
+    width: 2em;
+}
+
+.Filter {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+/* https://www.w3schools.com/howto/howto_css_switch.asp */
+
+/* The switch - the box around the slider */
+.Switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+/* Hide default HTML checkbox */
+.Switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.Slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.Slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.Filter-night input:checked + .Slider {
+    background-color: #312237;
+}
+
+.Filter-day input:checked + .Slider {
+    background-color: #ffb700;
+}
+
+.Filters input:checked + .Slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* WRAP */
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+    .Wrap {
+        display:flex;
+        flex-direction:row;
+        column-gap: 1em;
+        align-items: center;
+        height: auto;
+    }
+    .Map {
+        width:50%;
+        overflow: scroll;
+        
+    }
+    .Map-img img {
+        width:100%;
+    }
+    .Informations {
+        width:50%;
+        overflow: scroll;
+        height: 100vh;
+    }
+}
+
+.Wrap {
+    width: 100%;
+}
+
+/*MAP STYLE*/
+
+.Map {
+    margin-top: 1em;
+    height: 100vh;
+}
+
+.Map-img {
+    border: 1px solid #312237;
+}
+
+.Map-img img {
+    height: 100%;
+    width:100%;
+}
+
+/* INFORMATIONS */
+
+.Informations {
+    margin-top: 1em;
+}
+
+/* INFORMATION PICTURE */
+
+.Informations-picture {
+    background-color: #50b778d5;
+    position: relative;
+}
+
+.Informations-picture .icon-delete {
+    position: absolute;
+    top: 50%;
+    right: 45%;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.Informations-picture .picture-spot {
+    width: 100%;
+}
+
+/* INFORMATION DESCRIPTION */ 
+
+.Informations-description {
+    background-color: #50b778d5;
+    padding: 0.5em;
+}
+
+.Informations-description .Text {
+    text-align: justify;
+}
+
+.Informations-description .Title {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* INFORMATION EDIT DELETE */ 
+.Informations-edit-delete {
+    display: flex;
+    justify-content: center;
+}
+
+.Informations-edit-delete img {
+    width: 1.5em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction:row;
+}
+
+.About {
+    padding:0.5em;
+    width: 33%;
+}
+
+.Contact {
+    width: 33%;
+    padding:0.5em;
+}
+
+.Legal-notices {
+    width: 33%;
+    padding:0.5em;
+}
+
+footer a {
+    text-decoration:none;
+}

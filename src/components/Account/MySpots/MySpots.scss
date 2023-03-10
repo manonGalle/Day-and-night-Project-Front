@@ -1,0 +1,181 @@
+@use 'src/style/vars';
+
+/* MY SPOT(S) LIST */
+.Myspots {
+    &-fieldset {
+        position: relative;
+        text-align: left;
+        margin: 1em;
+        padding: 1rem;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    &-general {
+        background-color: vars.$color-green-opacity;
+        padding: 0.2em;
+        border-radius: 5px;
+        margin-bottom: 3em;
+    }
+
+    &-infos {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        transition: 0.3s;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 0.3em;
+        padding: 1rem;
+        background-color: white;
+    }
+
+    &-infos:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &-container {
+        flex-wrap: wrap;
+        margin-bottom: 1em;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &-spot-title {
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 0.3em;
+    }
+
+    &-spot-title:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+    }
+
+    &-container-infos {
+        margin-left: 0.5em;
+    }
+
+    &-button {
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+    &-container-title {
+        margin-bottom: 0.5em;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    /* DARKMODE MYSPOTS*/
+
+    &-dark {
+        .Myspots-infos {
+            background-color: vars.$color-violet;
+        }
+
+        .Myspots-spot-title,
+        .Myspots-status {
+            color: white;
+        }
+
+        textarea {
+            background-color: vars.$color-violet;
+            border: 1px solid black;
+            color: rgb(190, 190, 190);
+            border-radius: 2px;
+        }
+    }
+
+    /* EDIT MY SPOT(S) */
+    &-editspot {
+        &-general {
+            background-color: vars.$color-green-background;
+            border-radius: 5px;
+            margin: 0.5em;
+        }
+
+        &-cross-close {
+            text-align: right;
+            margin: 0.5em 1em 0em 0em;
+            padding-bottom: -1em;
+            padding-top: 0.5em;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: bold;
+            }
+        }
+
+        &-container {
+            text-align: center;
+            padding: 0.5em;
+            padding-top: -2em;
+        }
+
+        &-titleForm {
+            padding-top: -0.5em;
+        }
+
+        & select {
+            margin: .4em 0;
+        }
+
+        &-picture {
+            position: relative;
+            text-align: center;
+
+            & .picture-spot {
+                max-width: 100%;
+                max-height: 20em;
+            }
+
+            & .icon-delete {
+                width: 1.1em;
+                height: 1.1em;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            & .round {
+                background-color: white;
+                position: absolute;
+                bottom: 4%;
+                right: 48.5%;
+                cursor: pointer;
+                padding: .3em;
+                border-radius: 50%;
+            }
+        }
+
+        &-title {
+            width: 95%;
+            color: vars.$color-violet;
+            resize: none;
+            padding: .3em;
+        }
+
+        &-description {
+            min-height: 10em;
+            width: 95%;
+            color: vars.$color-violet;
+            padding: .3em;
+            resize: none;
+
+            &::-webkit-scrollbar {
+                width: .5em;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: vars.$color-green-opacity;
+                border: 1px solid rgb(194, 191, 191);
+                border-radius: 5px;
+            }
+        }
+
+        &-button {
+            text-align: center;
+        }
+    }
+}

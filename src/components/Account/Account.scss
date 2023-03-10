@@ -1,0 +1,91 @@
+@use 'src/style/vars';
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 768px) {
+    .Account-edit-mydata {
+        display: flex;
+        justify-content: center;
+    }
+    .Account-edit {
+        width: 50%;
+    }
+}
+
+.Account {
+
+    &-mydata-general, &-edit-mydata-general {
+        background-color: vars.$color-green-opacity;
+        padding: 0.2em;
+        border-radius: 5px;
+        margin-bottom: 3em;
+    }
+
+    &-mydata, &-edit-mydata {
+        position: relative;
+        text-align: left;
+        margin: 1em;
+        padding: 1rem;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    &-edit-button {
+        text-align: center;
+    }
+
+    button {
+        text-align: center;
+        border-radius: 5px;
+        border: none;
+        padding: .5em;
+        box-shadow: 3px 3px 5px grey;
+        background-color: vars.$color-green-opacity;
+    }
+
+    &-edit {
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 0.3em;
+        padding: 1rem;
+        background-color: white;
+    }
+
+    &-edit-message {
+        text-align: left;
+        padding-bottom: 1em;
+    }
+
+    &-mydata-infos {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    p {
+        color: red;
+        font-style: italic;
+    }
+
+    /* DARKMODE */
+    &-dark {
+        .Account-edit {
+            background-color: vars.$color-violet;
+            color: white;
+        }
+
+        input {
+            background-color: vars.$color-violet;
+            border: 1px solid black;
+            border-radius: 2px;
+            color: white;
+        }
+
+        button {
+            box-shadow: 3px 3px 5px black;
+        }
+    }
+}
+
+
+
+
+

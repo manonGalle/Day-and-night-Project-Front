@@ -1,0 +1,130 @@
+@use 'src/style/vars';
+
+/* INFORMATIONS */
+.Informations {
+   margin-top: 1em;
+   animation: open .2s;
+
+   /* INFORMATION PICTURE */
+    &-picture {
+        position: relative;
+        text-align: center;
+
+        & .icon-delete {
+            position: absolute;
+            bottom: 5%;
+            right: 45%;
+            width: 1.5em;
+            height: 1.5em;
+            cursor: pointer;
+        }
+
+        & .picture-spot {
+            max-width: 100%;
+            max-height: 20em;
+            border-radius: 5px;
+        }
+    }
+
+    /* INFORMATION DESCRIPTION */ 
+    &-description {
+        background-color: vars.$color-green-opacity;
+        padding: 0.5em;
+        border-radius: 5px;
+
+        &-border-day {
+            border: 0.2em solid vars.$color-day;
+        }
+
+        &-border-night {
+            border: 0.2em solid vars.$color-violet;
+        }
+        
+        & .Title-and-icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        & .icon {
+            justify-content: center;
+            align-self: center;
+            width: 2em;
+        }
+
+        & .sun, & .tent {
+            margin: 0.8em;
+            width: 2em;
+        }
+
+        & .Title {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.7em;
+            margin: 0.8em;
+        }
+
+        & .Text {
+            text-align: justify;
+            margin-bottom: .4em;
+        }
+    
+    }
+}
+
+
+/* DARKMODE */ 
+.Informations-dark .Title {
+    color: vars.$color-violet;
+}
+
+.Informations-dark button,
+.Informations-dark .btn {
+    box-shadow: 3px 3px 5px black;
+}
+
+
+/* RESPONSIVE DESKTOP */
+@media screen and (min-width: 768px) {
+    .Informations {
+        width: 50%;
+        margin-top: 0;
+        height: 91.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        &-description {
+            overflow: auto;
+            
+            &::-webkit-scrollbar {
+                width: .3em;
+              }
+            
+            &::-webkit-scrollbar-track {
+            background-color: vars.$color-green-opacity;
+            border-radius: 5px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+            background-color: white;
+            border: 1px solid rgb(194, 191, 191);
+            border-radius: 5px;
+            }
+        }
+    }
+
+    /* DARKMODE */ 
+    .Informations-dark {
+
+        & .Informations-description::-webkit-scrollbar-thumb {
+            background-color: vars.$color-violet;
+            border: 1px solid #4d3457;
+        }
+        
+    }
+    
+}
+
+

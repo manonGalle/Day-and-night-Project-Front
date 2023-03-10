@@ -1,0 +1,48 @@
+/* INFORMATION EDIT DELETE */ 
+.Informations-edit-delete {
+    display: flex;
+    justify-content: center;
+}
+
+.Informations-edit-delete img {
+    width: 1.5em;
+    padding: 1em .5em 0;
+    cursor: pointer;
+}
+
+.like-active {
+    background-color: #FF0063;
+}
+   
+.dislike-active {
+    background-color: #394350;
+}
+
+.btn {
+    border: none;
+    color:#fff;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap:6px;
+    background-color: #57b97d;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px #7c8e84;
+    padding: 6px 15px;
+    margin: 0 10px;
+}
+
+.Information {
+    &-rater{
+        margin-top: 1em;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    &-rateSymbol {
+        width: 20px;
+        height: 20px;
+        padding: 0 .7em;
+    }
+}

@@ -1,0 +1,49 @@
+@use 'src/style/vars';
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 768px) {
+
+}
+
+.PopupSpot {
+    background-color: vars.$color-green-opacity;
+    padding: 0.2em;
+    border-radius: 5px;
+    margin-top: 0.5em; 
+    animation: open .2s;
+
+    &-form {
+        background-color: white;
+        padding: 0.6em;
+        border-radius: 5px;
+        margin: 0.1em;
+        text-align: center;
+    } 
+
+    button {
+        margin: 0.5em;
+        width: 4em;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 3px 3px 5px grey;
+        background-color: vars.$color-green-opacity;
+        cursor: pointer;
+    }
+
+    &-h1 {
+        padding: 0.3em, 0.6em;
+    }
+
+    /* DARKMODE */
+    &-dark {
+        .PopupSpot-form {
+            background-color: vars.$color-violet;
+            color: white;
+        }
+
+        button {
+            box-shadow: 3px 3px 5px black;
+        }
+    }
+
+}
