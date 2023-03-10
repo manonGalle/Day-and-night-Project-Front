@@ -1,4 +1,4 @@
-<h1><img src="./day-and-night/src/assets/logo.png" height="70" style="vertical-align : middle"/> DAY AND NIGHT</h1>
+<h1><img src="./src/assets/logo.png" height="70" style="vertical-align : middle"/> DAY AND NIGHT</h1>
 Créée pour les voyageurs nomades, Day & Night est une application web proposant une carte interactive sur laquelle sont répertoriés des spots où dormir en pleine nature ainsi que des spots à visiter (points de vue, lacs, départs de randonnée, patrimoine...).
 Chaque utilisateur a accès aux spots proposés par la communauté.
 Les utilisateurs connectés peuvent ajouter des nouveaux spots ou éditer leurs spots, qui seront étudiés puis validés ou non selon les critères définis par les administrateurs.
@@ -71,4 +71,4 @@ yarn start
 [Nicolas RAYNAUD](https://www.linkedin.com/in/raynaudnicolas/) --> Développeur Backend 🎸 
 
 ## Screenshots
-<img src="./day-and-night/src/assets/screenshot_mobile.jpeg" height="500"/> <img src="./day-and-night/src/assets/screenshot_desktop.jpeg" width="600"/>
+<img src="./src/assets/screenshot_mobile.jpeg" height="500"/> <img src="./src/assets/screenshot_desktop.jpeg" width="600"/>
