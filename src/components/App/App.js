@@ -23,13 +23,10 @@ import FooterLegalMention from '../Footer/FooterLegalMention';
 
 function App() {
   const dispatch = useDispatch();
-
-  //const [cookies, setCookies] = reactUseCookie('');
   
   /* LOCAL STATE */ 
   const [email, setEmail] = useState('');
-
-  const logged = useSelector((state) => state.logged);
+  
   const connectedUsername = useSelector((state)=> state.connectedUsername);
   const apiBackUrl = process.env.REACT_APP_SYMFO_CONNECT_APIURL;
   

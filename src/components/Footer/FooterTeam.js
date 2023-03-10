@@ -2,7 +2,6 @@ import dipsy from '../../assets/Dipsy.png';
 import po from '../../assets/po.png';
 import lala from '../../assets/Lala.png';
 import sunny from '../../assets/sunny-baby.png';
-import tinky from '../../assets/tinky-winky.png';
 import { useSelector } from 'react-redux';
 
 function FooterTeam() {
